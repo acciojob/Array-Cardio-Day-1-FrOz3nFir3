@@ -121,14 +121,14 @@ export function sortbylived() {
 // Sort the people alphabetically by last name and return the sorted array
 export function sortByLastName() {
   // sort by lastName
-  people.sort(lastName);
+  people.sort(firstName);
   return people;
 
-  function lastName(string1, string2) {
+  function firstName(string1, string2) {
     let [string1FirstName, string1LastName] = string1.split(", ");
     let [string2FirstName, string2LastName] = string2.split(", ");
 
-    return string1FirstName.localeCompare(string2FirstName);
+    return string1FirstName > string2FirstName ? 1 : -1;
   }
 }
 
