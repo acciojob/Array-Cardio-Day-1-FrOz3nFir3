@@ -125,10 +125,10 @@ export function sortByLastName() {
   return people;
 
   function lastName(string1, string2) {
-    let [, string1LastName] = string1.split(", ");
-    let [, string2LastName] = string2.split(", ");
+    let [string1FirstName, string1LastName] = string1.split(", ");
+    let [string2FirstName, string2LastName] = string2.split(", ");
 
-    return string1LastName.localeCompare(string2LastName);
+    return string1FirstName.localeCompare(string2FirstName);
   }
 }
 
